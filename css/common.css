@@ -1,0 +1,22 @@
+/*公共样式*/
+.clearfix::before,
+.clearfix::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+    font:12px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
+}
+/* 设置一个类，表示中间容器的宽度*/
+.w{
+  /* 固定容器的宽度 */
+    width: 1190px; 
+  /* 设置容器居中 */
+    margin: 0 auto; 
+}

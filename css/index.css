@@ -1,0 +1,1664 @@
+.container{
+    background-color: #f4f4f4;
+}
+
+.hang{
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.promotional-top-wrap{
+    width: 100%;
+    background-color: #f75277;
+}
+
+.promotional-top{
+    margin: 0 auto;
+    width: 1380px;
+    height: 80px;
+    
+    background-image: url(https://raw.githubusercontent.com/jiaqd1203/JD.com/main/img/top-banner.png.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.promotional-top .promotional-top-left{
+    position: absolute;
+    left: 95px;
+}
+
+.promotional-top-list{
+    width: 309px;
+    height: 80px;
+    position: absolute;
+    left: 405px;
+    top: 0;
+    vertical-align: center;
+}
+
+.promotional-top-list img{
+    width: 68px;
+    height: 68px;
+    margin-right: 35px;
+    border-radius: 10px;
+    float: left;
+    margin-top: 6px;
+}
+
+.nav-wrap{
+  width: 100%; 
+  background-color:#e3e4e5;
+  /* 把高度写死，防止hover的时候那几个框框把高度撑大 */
+  height: 30px;
+  line-height: 30px;
+  border-bottom:1px #ddd solid;
+}
+
+.nav{
+    width: 1190px;
+    margin: 0 auto;
+    position: relative;        
+}
+
+/* 设置字体样式 */
+.nav a,
+.nav span,
+.nav i{
+color: #999;
+text-decoration: none;
+}
+
+.left-nav{
+    float: left;       
+}
+
+.left-nav .location{
+    /* text-align: center; 当鼠标hoverleft-nav离开后海外两个字会移动位置到city-list中间 */
+    /* 用padding调整让文字居中 */
+    padding: 0 10px;
+    border: 1px solid transparent;
+    border-bottom: none;
+    position: relative;
+    z-index: 9999;
+}
+
+.left-nav:hover .location{    
+    /* width: 60px; 
+    height: 30px;*/
+    background-color: #fff;
+    border: 1px rgb(204, 204, 204) solid;
+    border-bottom: none;
+    color: #f10125;
+    padding-bottom: 1px;
+}
+
+/* 或者.location .fas */
+.left-nav i{
+    color: #f10125;  
+}
+
+.left-nav:hover a{
+    color: #f10125;
+}
+
+.left-nav .city-list{
+    display: none;
+    width: 320px;
+    height: 436px;
+    border: 1px rgb(204, 204, 204) solid;
+    background-color: #fff;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
+    /* 设置绝对定位，使其不占据页面的位置,防止把导航栏撑高 */
+    position: absolute;
+    z-index: 999;
+    top:31px;
+}
+
+/* hover不能绑定给a，当鼠标移入到location时，我们要让city-list显示 */
+.left-nav:hover  .city-list{
+    display: block;
+    padding-left: 10px;
+}
+
+.city-list .city li{
+    padding: 2px 0;
+    float: left;
+    width: 60px;
+    line-height: 24px;    
+    height: 24px;
+}
+
+.city-list .city li:hover a{
+    background-color:#f4f4f4;
+    color: #e33333;
+    padding: 0 8px;
+    float: left;
+}
+
+.city-list .city li a{
+    color: #999;
+    padding: 0 8px;
+}
+
+.city-list .aLine{
+    width: 262px;
+    height: 0;
+    border-bottom: 1px dotted #eee;
+    margin: 10px auto 10px 10px;
+    float: left;
+}
+
+.city-list .district-list{
+    float: left;
+}
+
+.city-list .district-list p{
+    display: block;
+    margin-left: 10px;
+    color: #8f8f8f;
+    float: left;
+}
+
+.city-list .district-list .district{
+    float: left;
+}
+
+.city-list .district-list .district li{
+    float: left;
+    width: 150px;
+    line-height: 24px;
+    margin-left: 10px;   
+}
+
+.city-list .district-list .district li a{
+    color: #8f8f8f;
+} 
+
+.city-list .district-list .district li:hover a{
+    color: #f10125;    
+}
+
+.right-nav{
+float: right;
+}
+
+.right-nav li{
+    /* float: left; 跟inline-block一般只用一个布局？*/
+    display: inline-block; 
+    line-height: 30px;
+    /* padding: 0 7px; */
+    
+}
+
+.right-nav .login{
+    margin-right: 5px;
+}
+
+.right-nav li i{
+    margin-left:5px ;
+    /* 没办法把图标设置更小？*/
+    font-size: 12px;
+}
+
+/* 需要改红色的给设置成一个class */
+.right-nav .highlight{
+ color: #f10125;
+}
+
+.right-nav .myjd-list{
+    width: 280px;
+    height: 200px;
+    border: 1px rgb(204, 204, 204) solid;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .2) ;
+    position: absolute;
+    top: 30px;
+    /* padding:0 8px; */
+    display: none;
+}
+
+.right-nav .myjd{
+    height: 30px;
+    font-weight: 10px;
+    /* 鼠标每次移入我的京东都会有变化，因为我们加了边框，padding等
+    那么我们把下面hover改变的边框挪到这里就可以了 */
+    /* 挪上来发现hover之前原本的内容被加了边框，我们给他设置成透明
+    border: 1px rgb(204, 204, 204) solid; */
+    border: 1px solid transparent;
+    border-bottom: none;
+    /* 想让他字与框有点缝隙 */
+    padding: 0 2px;
+}
+/* 祖先元素盖不住后代元素，所以他俩不能父子关系 */
+.dropdown:hover .myjd{
+    background-color: #fff;
+    border: 1px rgb(204, 204, 204) solid;
+    border-bottom: none;
+    position: relative;
+    z-index: 9999;
+}
+
+.dropdown:hover .myjd-list{
+    display: block;
+    z-index: 999;
+}
+
+.dropdown .myjd-list .myinfo{
+    float: left;
+    /* margin-top: 10px; */
+    padding: 10px 0;
+    background-color: #fff;
+}
+.dropdown .myjd-list .myinfo2{
+    border-top:  1px solid #f1f1f1;
+}
+/* .dropdown .myjd-list .aLine{ 
+    width: 100%;
+    height: 0;
+    border-bottom: 1px dotted #eee; 
+    float: left;
+}*/
+
+.dropdown .myjd-list .myinfo li{
+     width: 120px;
+     float: left;
+     margin-left: 15px;
+}
+
+.right-nav .purchase{
+    border: 1px transparent solid;
+    border-bottom: none;
+    /* padding: 0 2px; */
+}
+
+.right-nav .purchase-dropdown:hover .purchase-list{
+    display: block;
+    z-index: 999;
+    position: absolute;
+    background-color: #fff;
+}
+
+
+
+.right-nav .purchase-list li{
+    width: 70px;
+    line-height: 24px;
+    
+}
+
+.right-nav .purchase-dropdown:hover .purchase{
+    background-color: #fff;
+    border: 1px rgb(204, 204, 204) solid;
+    border-bottom: none;
+    z-index: 9999;
+    position: relative;
+   
+}
+
+.right-nav .purchase-list{
+    position: absolute;
+    top: 30px;
+    border: 1px rgb(204, 204, 204) solid;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .2) ;
+    width: 140px;
+    display: none;
+    padding: 10px 0 10px 15px;
+    z-index: 999;
+}
+
+.right-nav li a:hover{
+    color: #f10125;
+}
+
+/* span设置宽高无效，把span改成li */
+.right-nav .line{
+    height: 10px;
+    width: 1px;
+    background-color: rgb(204, 202, 202);
+    /* 如果用span可以这样设置，border-left: #999 solid 1px; */
+    /* 当margin:10px 0时会把其他的li顶处nav？*/
+    margin: 12px 12px 0;
+    /* margin: 0px 10px; */
+}
+
+.header-wrap{
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.header{
+    margin: 0 auto;
+    width: 1190px;
+    height: 140px;
+    position: relative;
+}
+
+.logo-image{
+    display: block;
+    /* 用100%不好使 */
+    height: 120px;
+    width: 190px;
+    float: left;
+    position: absolute;
+    top: 10px;
+}
+
+.search{
+    top: 25px;
+    left: 260px;
+    width: 490px;
+    height: 36px;
+    position: absolute;
+    background-color: #e1251b;
+    border: 2px solid #e2231a;
+    /* padding: 1px; */
+}
+
+.search form{
+    width: 430px;
+}
+
+.search input{
+    width: 430px;
+    height: 32px;
+    border: 1px solid transparent;
+    /* 让搜索框上下红条一致 */
+    margin: 1px;
+    outline: none;
+}
+
+/* 设置搜索框里的小照相机的方法 */
+.search .upload-bg{
+    width: 20px;
+	height: 20px;
+	display: block;
+	background: url(https://raw.githubusercontent.com/jiaqd1203/JD.com/main/img/sprite-photo-search.png) no-repeat;
+	position: absolute;
+    top: 10px;
+    left: 400px;
+    /* right: 75px; */
+    /*把鼠标的停留方式弄成一只食指伸出的手*/
+    cursor: pointer;
+}
+/* 不起作用 */
+.search .upload-bg:hover{
+    background-color: url(https://raw.githubusercontent.com/jiaqd1203/JD.com/main/img/sprite-photo-search1.png) no-repeat;
+}
+
+.search button{
+    width: 56px;
+    height: 36px;
+    position: absolute;
+    left: 434px;
+    top: 0px;
+    background-color: #e1251b;
+    border: none;
+    color: white;
+    font-size: 16px;
+    /* 点button的时候有一圈黑线默认的样式框 */
+    outline: none;
+}
+
+.search button:hover{
+    background-color: #c81623;
+}
+
+.header .shopping-cart{
+    width: 130px;
+    height: 36px;
+    line-height: 36px;
+    background-color: white;
+    border:1px #eee solid;
+    position: absolute;
+    top: 25px;
+    /* left: 800px; */
+    right: 280px;
+    text-align: center;
+    padding: 1px;
+}
+
+.header .shopping-cart:hover{
+    border: 1px solid #c81623;
+}
+
+.header .shopping-cart i{
+    color: #e1251b;
+    font-size: 16px;
+    
+}
+
+.header .shopping-cart .shopping-count{
+    width: 16px;
+	height: 12px;
+    position: absolute;
+    top: 2px;
+    left: 32px;
+    display: inline-block;
+    font-size: 12px;    
+    line-height: 12px;
+    color: #fff;
+    background-color: #f10215;
+    border-radius: 7px;
+    text-align: center;
+}
+
+.header .shopping-cart a{
+    text-decoration: none;
+    color: #e1251b;
+    padding-left: 10px;
+}
+
+.header .hotwords{
+    position: absolute;
+    top: 70px;
+    left: 260px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.header .hotwords a{
+    text-decoration: none;
+    /* 或者items设置padding-right？ */
+    margin-right: 10px;
+    color: #999;
+}
+
+.header .hotwords a:hover{
+    color: #c81623;
+}
+
+.header .nav-items{
+    position: absolute;
+    top: 110px;
+    left: 200px;
+}
+
+.header .nav-items .redA{
+    font-size: 15px;
+    text-decoration: none;
+    color: #e1251b;
+    font-weight: bold;
+}
+
+.header .nav-items a{
+    font-size: 15px;
+    text-decoration: none;
+    color: #333;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.header .nav-items a:hover{
+    color: #c81623;
+}
+
+.header .promo{
+    position: absolute;
+    width: 190px;
+    height: 120px;
+    left: 1000px;
+    top: 10px;
+}
+
+.content-wrap{
+    display: block;
+    background-image: url(https://raw.githubusercontent.com/jiaqd1203/JD.com/main/img/background.png.webp);
+    /* background-size: 1900px 480px ; */
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
+.mainmenu{
+    width: 190px;
+    height: 480px;
+    float: left;
+    position: relative;
+}
+
+.mainmenu-list{
+    height: 450px;
+    background-color: #fefefe;
+    margin-top: 10px;
+    padding: 10px 0;
+}
+/* 选中第一个li的a */
+.mainmenu-list li:first-child a{
+    color: #c81623;
+}
+
+.mainmenu-list li:first-child i{
+    margin-left: 5px;
+    font-size: 15px;
+    color: #c81623;
+}
+
+.mainmenu-list li{
+    height: 25px;
+    line-height: 25px;
+    padding-left: 18px;
+}
+
+.mainmenu-list li:hover{
+    background-color:#d9d9d9;
+}
+/* .sub-menu必须得是这个li的子元素 */
+.mainmenu-list li:hover .sub-menu{
+    display: block;
+}
+
+.mainmenu-list span{
+    color: #636363;
+}
+
+.mainmenu-list a{
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.mainmenu-list a:hover{
+    color: #c81623;
+}
+
+.sub-menu{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    left: 191px;
+    top: 10px;
+    width: 998px;
+    border: 1px solid #f7f7f7;
+    box-shadow: 2px 0 5px rgba(0,0,0,.3);
+    z-index: 100;
+}
+
+.sub-menu .category{
+    padding: 20px 0 10px;
+}
+
+.sub-menu .cate-part1{
+    float: left;
+    width: 800px;
+    background-color: #fff;
+}
+
+.sub-menu .cate-part1 .cate-channel{
+    overflow: hidden;
+    padding-left: 20px;
+    height: 24px;
+}
+
+.sub-menu .cate-part1 .cate-channel a{
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    margin-left: 10px;
+    padding: 0 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+.sub-menu .category .cate-part1 .cate-channel a:hover{
+    background-color: #c81623;
+}
+
+.sub-menu .cate-part1 .cate-channel a i{
+    color: #fff;
+    margin-left: 5px;
+}
+
+.sub-menu .cate-part1 .cate-detail{
+    overflow: hidden;
+    padding: 10px 0 0 20px;
+}
+
+.cate-detail .cate-detail-item{
+    display: block;
+    margin: 5px auto;
+    /* 防止溢出 */
+    overflow: hidden;
+}
+
+.cate-detail .cate-detail-title{
+    float: left;
+    width: 70px;
+    height: 18px;
+    line-height: 18px;
+    text-align: right;
+    margin: 3px auto;
+}
+
+.cate-detail .cate-detail-title{
+    color: #333;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.cate-detail .cate-detail-title:hover{
+    color: #c81623;
+}
+
+.category .cate-detail .cate-detail-title:hover i{
+    color: #c81623;
+}
+
+.category .cate-detail .cate-detail-title i{
+    color: #333;
+    margin-left: 5px;
+}
+
+.cate-detail .cate-detail-content{
+    /* 如果加上下面的float，content的内容全部到title下面了，
+    float的内容并没有一行显示，去掉floatleft恢复正常？？ */
+    /* float: left;*/
+    padding-left: 20px;
+    overflow: hidden;
+}
+
+.category .cate-detail .cate-detail-content a{
+    /* display: inline-block; */
+    float: left;
+    margin: 3px 0;
+    height: 18px;
+    line-height: 18px;
+    padding: 0 7px;
+    color: #666;
+    cursor: pointer;
+}
+
+.cate-detail .cate-detail-content a:hover{
+    color: #c81623;
+}
+
+.sub-menu .cate-part2{
+    float: left;
+    width: 198px;
+}
+
+.sub-menu .cate-part2 .cate-brand{
+    width: 168px;
+    margin-left: 15px;
+}
+
+.sub-menu .cate-part2 .cate-brand img{
+    width: 83px;
+    height: 35px;
+    float: left;
+    background-color: #e7e7e7;
+    margin: 0 1px 1px 0;
+}
+
+.sub-menu .cate-part2 .cate-promotion{
+    margin: 10px auto 8px;
+    width: 168px;
+}
+
+.sub-menu .cate-part2 .cate-promotion img{
+    width: 168px;
+    height: 134px;
+    background-color: #e7e7e7;
+}
+
+.slider-wrap{
+    height: 100%;    
+    float: left;
+}
+
+.slider{    
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 590px;
+    height: 470px;   
+    overflow: hidden;
+    margin-top: 10px;
+    margin-left: 10px;    
+}
+
+.slider #imgList{
+    position: absolute;
+    left: 0;
+}
+
+.slider button{
+    width: 25px;
+    height: 35px;
+    background-color: rgba(0, 0, 0, .15);
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    outline-style: none;
+}
+
+.slider button:hover{
+    background-color: rgba(0,0,0,.4);
+}
+
+.slider .btn-prev{
+    position: absolute;
+    left: 0;
+    top: 218px;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;    
+}
+
+.slider .btn-next{
+    position: absolute;
+    left: 565px;
+    top: 218px;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+}
+
+.slider li{
+    float: left;
+    width: 590px;
+    height: 470px;
+}
+/* 给这个div开定位而不是给a，只定位一次就好，更方便 */
+.slider #pointer{
+    position: absolute;   
+    left: 30px;
+    bottom: 20px;
+    z-index: 999;
+}
+
+.slider #pointer a{
+    /* 此处没必要用float加display：block,
+    内联元素脱离文档流自动变块元素 */
+    /* display: inline-block; */
+    float: left;
+    width: 8px;
+    height: 8px;
+    margin-right: 4px; 
+    border: 2px solid rgba(0, 0, 0, .05);  
+    background-color: rgba(255, 255, 255, .4);
+    border-radius: 50%;
+}
+
+.slider #pointer a:hover{
+    width: 8px;
+    height: 8px;
+    border: 2px solid rgba(0, 0, 0, .4);
+    background-color: #fff;    
+}
+
+#ad-boxwrap{
+    position: relative;
+    width: 190px;
+    height: 470px;
+    display: block;
+    float: left;
+    margin: 10px 10px 0;
+    overflow: hidden;
+}
+
+.ad-box{
+    display: block;
+}
+
+.ad-box a img{
+    width: 190px;
+    height: 150px;
+    margin-bottom: 6px;
+}
+
+.ad-box a img:hover{
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+
+#ad-boxwrap button{
+    width: 25px;
+    height: 35px;
+    background-color: rgba(0, 0, 0, .15);
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    outline-style: none;
+}
+
+#ad-boxwrap button:hover{
+    background-color: rgba(0,0,0,.4);
+}
+
+#ad-boxwrap .btn-ad-prev{
+    position: absolute;
+    left: 0;
+    top: 217.5px;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;    
+}
+
+#ad-boxwrap .btn-ad-next{
+    position: absolute;
+    left: 165px;
+    top: 217.5px;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+}
+
+.function-wrap{
+    width: 190px;
+    height: 470px;
+    margin-top: 10px;
+    background-color: #fff;
+    float: left;
+    position: relative;
+}
+
+.function-wrap .user{
+    width: 190px;
+    height: 102px;
+    position: relative;
+}
+
+.function-wrap .user img{
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    left: 20px;
+    top: 13px;
+    border-radius: 50%;
+    display: block;
+}
+
+.function-wrap .user .user-show{
+    width: 106px;
+    height: 38px;
+    position: absolute;
+    top: 16px;
+    left: 74px;
+}
+
+.function-wrap .user .user-show a{
+    color: rgb(102, 102, 102);
+    text-decoration: none;
+}
+
+.function-wrap .user .user-show a:hover{
+    color: rgb(200, 22, 35);
+}
+
+.function-wrap .user .user-show p a{
+    color: #333;
+    text-decoration: none;
+}
+
+.function-wrap .user-profit{
+    width: 190px;
+    height: 25px;
+    text-align: center;
+    position: absolute;
+    top: 67px;
+} 
+
+.function-wrap .user-profit a{
+    text-decoration: none;
+}
+
+.function-wrap .user-profit-new{
+    display: inline-block;
+    width: 70px;
+    height: 25px;
+    margin: 0 5px;
+    color: #fff;
+    background-color: #e1251b;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 13px;
+}
+
+.function-wrap .user-profit-new:hover{
+    background-color: #c81623;
+    transition: background .3s ease,color .3s ease;
+}
+
+.function-wrap .user-profit-plus{
+    display: inline-block;
+    width: 70px;
+    height: 25px;
+    margin: 0 5px;
+    color: #e5d790;
+    background-color: #363634;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 13px;
+}
+
+.function-wrap .user-profit-plus:hover{
+    background-color: #c81623;
+    color: #fff;
+    transition: background .3s ease,color .3s ease;
+}
+
+.function-wrap .user:after{
+    position: absolute;
+    height: 1px;
+    left: 15px;
+    right: 15px;
+    content: "";
+    bottom: 0;
+    background: linear-gradient(270deg,white,#eeeeee,#eeeeee,white);
+}
+
+.function-wrap .news{
+    width: 190px;
+    height: 130px;
+    position: relative;
+}
+
+.function-wrap .news .news-head{
+    margin-bottom: 8px;
+}
+
+.function-wrap .news h3{
+    display: inline-block;
+    font-size: 14px;
+    color: #333;
+    margin-left: 15px;
+    font-weight: bold;
+    width: 56px;
+    height: 20px;
+    margin-top: 9px;
+}
+
+.function-wrap .news a{
+    color: #999;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.function-wrap .news-content{
+    margin: 0 15px;
+    height: 88px;
+    width: 160px;
+    position: relative;
+    padding: 0 15px;
+    bottom: 7px;
+}
+
+.function-wrap .news-content li{
+    width: 160px;
+    height: 16px;
+    line-height: 16px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #999;
+    margin-bottom: 6px;
+    list-style: none;
+    /* 不开这个定位里面的a全部重叠在一起了 */
+    position: relative;    
+}
+
+.function-wrap .news-content li a{
+    width: 160px;
+    height: 16px;
+    color: rgb(102, 102, 102);
+    cursor: pointer;
+    line-height: 16px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 12px;
+    position: absolute;
+}
+
+.function-wrap .news-content li a span{
+    display: inline-block;
+    margin-right: 6px;
+    width: 35px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    color: #e1251b;
+    background-color: rgba(225,37,27,.08);
+}
+
+.function-wrap .news:after{
+    position: absolute;
+    height: 1px;
+    left: 15px;
+    right: 15px;
+    content: "";
+    bottom: 0;
+    background: linear-gradient(270deg,white,#eeeeee,#eeeeee,white);
+}
+
+.function-wrap .function{
+    width: 190px;
+    height: 238px;
+    padding-top: 5px;
+}
+
+.function-wrap .function-list{
+    padding: 5px 0;
+}
+
+.function-wrap .function-item{
+    float: left;
+    width: 63px;
+    height: 55px;
+    text-align: center;
+}
+
+.function-wrap .function-item img{
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.function-wrap .function-item:hover span{
+    color: #e1251b;
+    transition: color .15s ease;
+}
+
+.function-wrap .function-item:hover .function-item-img{
+    display: none;
+    transition: all .5s;
+}
+
+.function-wrap .function-item:hover .function-item-img-hover{
+    display: inline-block;
+    transition: all .5s;
+}
+
+.function-wrap .function-item-img-hover{
+    display: none;
+}
+
+.function-item a span{
+    display: block;
+    color: #333;
+    height: 25px;
+
+}
+
+.seckill{
+    position: relative;
+    height: 260px;
+    width: 1190px;
+    margin-top: 30px;
+    background-color: #fff;
+}
+
+.seckill-countdown{
+    position: relative;
+    float: left;
+    width: 190px;
+    height: 100%;
+    color: #fff;
+    background-color: #e83632;
+    background-image: url(https://raw.githubusercontent.com/jiaqd1203/JD.com/main/img/seckill.png);
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
+.countdown-title{
+    width: 100%;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 31px;
+}
+
+.seckill-countdown .countdown-desc{
+    margin-top: 90px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.seckill-countdown .countdown-desc strong{
+    font-size: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    padding-right: 2px;
+    font-weight: 700;
+}
+
+.seckill-countdown .timer{
+    width: 130px;
+    height: 30px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    color: #333;
+    font-weight: 700;
+}
+
+.seckill-countdown .timer-unit{
+    width: 30px;
+    height: 30px;
+    float: left;
+    background-color: #2f3430;
+    color: #fff;
+    font-size: 20px;
+    margin-right: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.seckill-countdown .timer-unit:after{
+    content: ":";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -20px;
+    font-weight: bolder;
+    font-size: 18px;
+    width: 20px;
+    height: 100%;
+}
+
+.seckill-countdown .timer-unit:last-child:after{
+    content: "";
+}
+
+.seckill-countdown  .timer-second{
+    margin-right: 0;
+}
+
+.seckill-list{
+    position: relative;
+}
+
+.seckill-list .seckill-item{
+    float: left;
+    width: 200px;
+    height: 260px;
+    position: relative;
+}
+
+.seckill-list .seckill-item img{
+    display: block;
+    width: 140px;
+    height: 140px;
+    margin: 30px auto 0;   
+}
+
+.seckill-list .seckill-item img:hover{
+    opacity: 0.8;
+}
+
+.seckill-list .seckill-item-name{
+    font-size: 12px;
+    font-weight: 400;
+    width: 160px;
+    color: #333;
+    transition: color .2s ease;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0 auto;
+    margin-top: 13px;
+}
+
+.seckill-list .seckill-item-price{
+    border: 1px solid #e1251b;
+    width: 160px;
+    height: 24px;
+    line-height: 24px;
+    margin: 7px auto 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #e1251b;
+}
+
+.seckill-list .seckill-item-price-sec{
+    width: 92px;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    /* 要减去border */
+    line-height: 22px;
+    float: left;
+    position: relative;
+}
+
+.seckill-list .seckill-item-price-sec i{
+    font-size: 12px;
+    font-weight: 400;
+    margin-right: -5px;
+    
+}
+
+.seckill-list .seckill-item-price-sec i:before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-color: transparent white transparent transparent;
+    border-style: solid;
+    border-width: 22px 8px 0 0;
+    position: absolute;
+    top: 0;
+    left: 84px;
+}
+
+.seckill-list .seckill-item:after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 1px;
+    height: 200px;
+    transform: translateY(-50%);
+    background: linear-gradient(180deg,white,#eeeeee,white);
+}
+
+.seckill-list .seckill-item-price-origin{
+    height: 100%;
+    width: 66px;
+    float: right;
+    background-color: #fff;
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+    line-height: 22px;
+    box-sizing: border-box;
+    text-decoration: line-through;
+    vertical-align: top;
+}
+
+.seckill-list .seckill-item-price-origin i{
+    margin-right: -5px;    
+}
+
+.seckill-slider{
+    width: 200px;
+    height: 260px;
+    float: left;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#seckill-slider-list{
+    width: 600px;
+    height: 240px;
+    position: absolute;
+    left: 0;    
+}
+
+.seckill-slider .seckill-slider-item{  
+    width: 180px;
+    height: 240px;
+    color: #666;
+    text-decoration: none;
+    float: left;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.seckill-slider .seckill-slider-item-image img{
+    width: 120px;
+    height: 120px;
+    margin-top: 20px;
+}
+
+.seckill-slider .seckill-slider-item-image img:hover{
+    opacity: 0.8;
+}
+
+.seckill-slider .seckill-slider-item-info{
+    width: 180px;
+    height: 90px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    background: linear-gradient(180deg,rgba(255,255,255,.5),rgba(220,224,236,.5));
+}
+
+.seckill-slider .seckill-slider-item-info .item-info-promo{
+    font-weight: 700;
+    color: #333;
+}
+
+.seckill-slider .seckill-slider-item-info .item-info-action{
+    width: 82px;
+    height: 24px;
+    color: #e1251b;
+    border-radius: 14px;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid #e1251b;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 22px;
+    padding-left: 4px;
+    margin-top: 4px;
+    display: inline-block;
+    transition: background-color .2s ease;
+}
+
+.seckill-slider .seckill-slider-item-info .item-info-action:hover{
+    color: white;
+    border-color: transparent;
+    background-color: #c81623;
+}
+
+.activity{
+    width: 1270px;
+    height: 590px;
+    margin: 30px auto;
+    background-image: url(https://raw.githubusercontent.com/jiaqd1203/JD.com/main/img/activity.webp);
+    background-size: cover;
+    margin-bottom: 0;
+}
+
+.activity-main{
+    width: 1190px;
+    height: 440px;
+    margin-left: 40px;
+    margin-top: 145px;
+    float: left;
+}
+
+.activity-sku{
+    width: 1000px;
+    height: 440px;
+    float: left;
+}
+
+.activity-sku .sku-item{
+    width: 190px;
+    height: 210px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    background-image: url(https://raw.githubusercontent.com/jiaqd1203/JD.com/main/img/sku-back.png!cc_190x210.webp);
+    float: left;
+    text-align: center;
+    position: relative;
+    border-radius: 5px;
+}
+
+.activity-sku .sku-item img{
+    width: 130px;
+    height: 130px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.activity-sku .sku-item .sku-img:hover{
+    opacity: 0.7;
+}
+
+.activity-sku .sku-item .sku-desc{
+    position: relative;
+    cursor: pointer;
+}
+
+.activity-sku .sku-item .sku-desc img{
+    width: 174px;
+    height: 30px;
+    margin-top: 0;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.activity-sku .sku-item .sku-desc .sku-desc-text{
+    font-size: 14px;
+    color: #fff;
+    line-height: 14px;
+    width: 174px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 5.5px;
+}
+
+.activity-sku .sku-item .sku-title{
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    font-size: 14px;
+    width: 190px;
+    height: 13.3px;
+    color: #de452b;
+    line-height: 13.3px;
+    text-align: center;
+}
+
+.activity-shops{
+    width: 190px;
+    height: 440px;
+    float: left;
+}
+
+.shop-item{
+    width: 190px;
+    height: 100px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mod-service{
+    width: 100%;
+    padding: 30px 0;
+    border-bottom: 1px solid #dedede;
+}
+
+.mod-service-list{
+    width: 1190px;
+    margin: 0 auto;
+    width: 1190px;
+    height: 42px;
+}
+
+.mod-service-list .mod-service-item{
+    float: left;
+    width: 252px;
+    list-style: none;
+    text-align: center;
+    padding-left: 45px;
+}
+
+.mod-service-list .mod-service-item .mod-service-item-title{
+    float: left;
+    width: 36px;
+    height: 42px;
+}
+
+.mod-service-list .mod-service-item .mod-service-item-text{
+    float: left;
+    height: 42px;
+    line-height: 42px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #444;
+    overflow: hidden;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.space{
+    width: 100%;
+    height: 300px;
+}
+.mod-help{
+    padding: 20px 0;
+}
+
+.mod-help-inner{
+    width: 990px;
+    margin: 0 auto;
+}
+
+.mod-help-inner a:hover{
+    color: #c81623;
+}
+
+.mod-help-list{
+    float: left;
+    width: 158px;
+}
+
+.mod-help-title{
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.mod-help-content{
+    color: #636363;
+    margin-bottom: 3px;
+}
+
+.mod-help-content li{
+    padding: 2px 0;
+}
+
+.mod-help-content li a{
+    color: #666;
+}
+
+.mod-help-cover{
+    float: left;
+    width: 200px;
+}
+
+.mod-help-cover-title{
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.mod-help-cover-content{
+    color: #636363;
+}
+
+.mod-help-cover-content .mod-help-cover-more{
+    text-align: right;
+}
+
+.mod-help-cover-content .mod-help-cover-more a{
+    color: #666;
+}
+
+.mod-help-cover-content .mod-help-cover-more a:hover{
+    color: #c81623;
+}
+
+.mod-copyright-content{
+    padding: 10px 0;
+}
+
+.mod-copyright-content a{
+    color: #999;
+}
+
+.mod-copyright-inner{
+    width: 990px;
+    border-top: 1px solid #e1e1e1;
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.mod-copyright-link a{
+    color: #666;
+}
+
+.mod-copyright-link a:hover{
+    color: #c81623;
+}
+
+.mod-copyright-content p{
+    margin-bottom: 5px;
+}
+
+.mod-copyright-inter{
+    margin-bottom: 5px;
+}
+
+.mod-copyright-inner a:hover{
+    color: #c81623;
+}
+
+.mod-copyright-inner .split{
+    color: #ccc;
+    margin: 0 3px;
+}
+
+.mod-copyright-inner .mod-copyright-content .split{
+    color: #ccc;
+    margin: 0 10px;
+}
+
+.mod-copyright-inner .mod-copyright-content span{
+    color: #999;
+}
+
+.mod-copyright-inter img{
+    width: 18px;
+    height: 12px;
+}
+
+.mod-copyright-authentic{
+    width: 990px;
+    margin: 25px 0;
+}
+
+.mod-copyright-authentic img{
+    width: 95px;
+    height: 30px;
+    margin: 0 3px;
+}
+
+#elevator{
+   position: fixed;
+   width: 60px;
+   top: 760px;
+   left: 50%;
+   margin-left: 635px;
+   background-color: #fff; 
+}
+
+.elevator-item{
+    position: relative;
+    width: 60px;
+    height: 60px;    
+}
+
+.elevator-item:hover a{
+    background-color: #c81623;
+    color: #fff !important;
+    z-index: 999;
+}
+
+.elevator-item:hover a:after{
+    display: none;
+}
+
+.elevator-item a{   
+    display: block;
+    margin: 0 auto;
+    padding: 10px 15px;
+    width: 30px;
+    height: 40px;
+    font-size: 14px;
+    color: #333;
+}
+
+.elevator-item a:after{
+    /* 加了content才正常显示 */
+    content: '';
+    height: 1px;
+    width: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    display: inline-block;    
+    background: linear-gradient(270deg,white,#eee,#eee,white);
+}
