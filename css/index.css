@@ -18,7 +18,7 @@
     width: 1380px;
     height: 80px;
     
-    background-image: url(https://raw.githubusercontent.com/jiaqd1203/JD.com/main/img/top-banner.png.webp);
+    background-image: url(https://raw.githubusercontent.com/jiaqd1203/JingDong.com/main/img/top-banner.png.webp);
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
@@ -374,7 +374,7 @@ float: right;
     width: 20px;
 	height: 20px;
 	display: block;
-	background: url(https://raw.githubusercontent.com/jiaqd1203/JD.com/main/img/sprite-photo-search.png) no-repeat;
+	background: url(https://raw.githubusercontent.com/jiaqd1203/JingDong.com/main/img/sprite-photo-search.png) no-repeat;
 	position: absolute;
     top: 10px;
     left: 400px;
@@ -384,7 +384,7 @@ float: right;
 }
 /* 不起作用 */
 .search .upload-bg:hover{
-    background-color: url(https://raw.githubusercontent.com/jiaqd1203/JD.com/main/img/sprite-photo-search1.png) no-repeat;
+    background-color: url(https://raw.githubusercontent.com/jiaqd1203/JingDong.com/main/img/sprite-photo-search1.png) no-repeat;
 }
 
 .search button{
@@ -504,7 +504,7 @@ float: right;
 
 .content-wrap{
     display: block;
-    background-image: url(https://raw.githubusercontent.com/jiaqd1203/JD.com/main/img/background.png.webp);
+    background-image: url(https://raw.githubusercontent.com/jiaqd1203/JingDong.com/main/img/background.png.webp);
     /* background-size: 1900px 480px ; */
     background-position: 50%;
     background-repeat: no-repeat;
@@ -1093,7 +1093,7 @@ float: right;
     height: 100%;
     color: #fff;
     background-color: #e83632;
-    background-image: url(https://raw.githubusercontent.com/jiaqd1203/JD.com/main/img/seckill.png);
+    background-image: url(https://raw.githubusercontent.com/jiaqd1203/JingDong.com/main/img/seckill.png);
     background-size: contain;
     background-position: 50%;
     background-repeat: no-repeat;
@@ -1348,7 +1348,7 @@ float: right;
     width: 1270px;
     height: 590px;
     margin: 30px auto;
-    background-image: url(https://raw.githubusercontent.com/jiaqd1203/JD.com/main/img/activity.webp);
+    background-image: url(https://raw.githubusercontent.com/jiaqd1203/JingDong.com/main/img/activity.webp);
     background-size: cover;
     margin-bottom: 0;
 }
@@ -1373,7 +1373,7 @@ float: right;
     margin-right: 10px;
     margin-bottom: 10px;
     background-color: #fff;
-    background-image: url(https://raw.githubusercontent.com/jiaqd1203/JD.com/main/img/sku-back.png!cc_190x210.webp);
+    background-image: url(https://raw.githubusercontent.com/jiaqd1203/JingDong.com/main/img/sku-back.png!cc_190x210.webp);
     float: left;
     text-align: center;
     position: relative;
